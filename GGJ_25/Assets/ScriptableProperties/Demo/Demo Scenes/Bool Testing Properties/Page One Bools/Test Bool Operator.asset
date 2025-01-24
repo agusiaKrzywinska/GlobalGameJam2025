@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38e26ebcdc2cf5842aa4d9215931a56a, type: 3}
+  m_Name: Test Bool Operator
+  m_EditorClassIdentifier: 
+  value: 0
+  defaultValue: 0
+  values:
+  - {fileID: 11400000, guid: 14aef9635c2734c41a0ccee80eeabca7, type: 2}
+  - {fileID: 11400000, guid: ea2f2a447e02f794196e2c0c9ff95e31, type: 2}
+  - {fileID: 11400000, guid: 906c295f69ff17b4abfd8ec1158425bd, type: 2}
+  - {fileID: 11400000, guid: 7324b6f26ddd37f4d99a483d71512722, type: 2}
+  - {fileID: 11400000, guid: 02db97d3ddd144a40aeb7c648c539aa4, type: 2}
+  - {fileID: 11400000, guid: 90423d7bedda96e48b29a69fbce493f2, type: 2}
+  operations: 0200000002000000020000000200000002000000
+  valueConstant: 0

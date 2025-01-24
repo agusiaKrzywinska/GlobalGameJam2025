@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38e26ebcdc2cf5842aa4d9215931a56a, type: 3}
+  m_Name: Page3ButtonChecker
+  m_EditorClassIdentifier: 
+  value: 0
+  defaultValue: 0
+  values:
+  - {fileID: 11400000, guid: aea865164d9d2bc47a423b4a3c09d48b, type: 2}
+  - {fileID: 11400000, guid: e084a616860fb8f41b418bf5f0d59c3a, type: 2}
+  - {fileID: 11400000, guid: bea8da9c65584a843be6ddd6f50dc34a, type: 2}
+  - {fileID: 11400000, guid: 3a66f444e7073d849a7b4a054f144627, type: 2}
+  operations: 020000000200000002000000
+  valueConstant: 0

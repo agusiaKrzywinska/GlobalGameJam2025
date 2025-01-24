@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38e26ebcdc2cf5842aa4d9215931a56a, type: 3}
+  m_Name: Button Checker
+  m_EditorClassIdentifier: 
+  value: 1
+  defaultValue: 0
+  values:
+  - {fileID: 11400000, guid: 3442da0fb1e3c0642a9aace587488662, type: 2}
+  - {fileID: 11400000, guid: 29d271cac7d11a3458810a009a76b7b6, type: 2}
+  operations: 02000000
+  valueConstant: 0

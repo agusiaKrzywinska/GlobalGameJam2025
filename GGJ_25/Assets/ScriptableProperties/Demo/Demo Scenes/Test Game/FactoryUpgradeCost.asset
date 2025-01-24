@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9261d1d5867a6742a6f86ad2f03b538, type: 3}
+  m_Name: FactoryUpgradeCost
+  m_EditorClassIdentifier: 
+  value: 0
+  defaultValue: 0
+  values:
+  - cast:
+      _property: {fileID: 11400000, guid: db0523afedaa61f4fb5102cab16d1489, type: 2}
+      _int: {fileID: 11400000, guid: db0523afedaa61f4fb5102cab16d1489, type: 2}
+      _float: {fileID: 0}
+      _bool: {fileID: 0}
+      _string: {fileID: 0}
+      type: 2
+    constant: 0
+    hideScriptableField: 0
+  - cast:
+      _property: {fileID: 0}
+      _int: {fileID: 0}
+      _float: {fileID: 0}
+      _bool: {fileID: 0}
+      _string: {fileID: 0}
+      type: 0
+    constant: 15
+    hideScriptableField: 1
+  - cast:
+      _property: {fileID: 0}
+      _int: {fileID: 0}
+      _float: {fileID: 0}
+      _bool: {fileID: 0}
+      _string: {fileID: 0}
+      type: 0
+    constant: 10
+    hideScriptableField: 1
+  operations: 0200000000000000

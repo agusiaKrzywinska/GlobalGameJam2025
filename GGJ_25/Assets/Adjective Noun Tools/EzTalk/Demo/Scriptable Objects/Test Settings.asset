@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d12bf3de6026ee4b8c483bd878cf3f4, type: 3}
+  m_Name: Test Settings
+  m_EditorClassIdentifier: 
+  placeStyle: 0
+  waitBetweenEachPlace: 0.1
+  onPlaceText:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2629019459022435503, guid: 3880172b20d3d1045a43fe3fbceaa0b7,
+          type: 3}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  timeOnScreen: 2.5
+  isPlacing: 0

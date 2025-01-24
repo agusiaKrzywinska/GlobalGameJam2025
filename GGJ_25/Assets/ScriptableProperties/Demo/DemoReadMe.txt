@@ -1,0 +1,1 @@
+This folder contains a simple demo scene. Feel free to delete it once you take a look to reduce the amount of Scriptable Properties in your project.

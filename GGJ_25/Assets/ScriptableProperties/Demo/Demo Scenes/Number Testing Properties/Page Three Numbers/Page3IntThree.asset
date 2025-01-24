@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ee92f2428395446be6dcd099c9bcf1, type: 3}
+  m_Name: Page3IntThree
+  m_EditorClassIdentifier: 
+  value: 3
+  defaultValue: 3
+  min: {fileID: 11400000, guid: 13ba3abaa75e5bf43a88bb42d706113f, type: 2}
+  minConstant: 0
+  defaultMin: 0
+  max: {fileID: 11400000, guid: 61650268df6da9043aa6b3b1cbc5fe88, type: 2}
+  maxConstant: 3
+  defaultMax: 3
