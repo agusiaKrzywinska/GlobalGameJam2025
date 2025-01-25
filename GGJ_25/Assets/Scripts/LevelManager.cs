@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class LevelManager : Singleton<LevelManager>
@@ -7,15 +8,24 @@ public class LevelManager : Singleton<LevelManager>
     public List<Bubble> bubblesInLevel = new List<Bubble>();
     public Rigidbody2D[] movedObjects;
     private Vector3[] startPositionsOfMovedObjects;
-
+    [HideInInspector]
     public BubbleController mainBubble;
+    [HideInInspector]
     public Cinemachine.CinemachineBrain brain;
+    [HideInInspector]
     public CameraBrainEventsHandler brainHelper;
+
+    [SerializeField]
+    private PoemManager poems;
+    [SerializeField]
+    private TextMeshPro peomDisplayer;
     // Start is called before the first frame update
     void Start()
     {
         brain = FindObjectOfType<Cinemachine.CinemachineBrain>();
         brainHelper = brain.GetComponent<CameraBrainEventsHandler>();
+
+        peomDisplayer.text = poems.poems[Random.Range(0, poems.poems.Length)];
 
         startPositionsOfMovedObjects = new Vector3[movedObjects.Length];
         for (int i = 0; i < movedObjects.Length; i++)
