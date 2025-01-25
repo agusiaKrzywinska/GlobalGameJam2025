@@ -4622,6 +4622,7 @@ MonoBehaviour:
   bubbleSize: {x: 0.05, y: 0.35}
   isInLauncher: 1
   isInEndZone: 0
+  goNext: 0
   launcher: {fileID: 1569769949}
   floatUpSpeed: {x: 0, y: 5, z: 0}
   xSpeed: 0.2
@@ -5649,7 +5650,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5674,7 +5675,7 @@ Transform:
   m_GameObject: {fileID: 1310057221}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.4822483, y: 0.036866188, z: -10}
+  m_LocalPosition: {x: 57.191116, y: -6.582341, z: -21.152618}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6240,6 +6241,11 @@ MonoBehaviour:
   movedObjects:
   - {fileID: 842526361}
   mainBubble: {fileID: 0}
+  brain: {fileID: 0}
+  brainHelper: {fileID: 0}
+  poems: {fileID: 0}
+  peomDisplayer: {fileID: 0}
+  nextLevel: 
 --- !u!4 &1381391102
 Transform:
   m_ObjectHideFlags: 0
@@ -8718,14 +8724,6 @@ PrefabInstance:
     - target: {fileID: 6388185648071679025, guid: 40b336046afada64fb31db4b9f1cc276, type: 3}
       propertyPath: m_Name
       value: Bubble Spot
-      objectReference: {fileID: 0}
-    - target: {fileID: 7948502207684880819, guid: 40b336046afada64fb31db4b9f1cc276, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 7948502207684880819, guid: 40b336046afada64fb31db4b9f1cc276, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 7948502207684880819, guid: 40b336046afada64fb31db4b9f1cc276, type: 3}
       propertyPath: m_LocalPosition.x
