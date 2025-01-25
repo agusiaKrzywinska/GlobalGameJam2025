@@ -30,6 +30,9 @@ public class BubbleController : MonoBehaviour
     [HideInInspector]
     public Rigidbody2D body;
 
+    [SerializeField]
+    private float velocityCap = 10f;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -65,6 +68,12 @@ public class BubbleController : MonoBehaviour
         //check for left and right movement. 
         float direction = (Input.GetKey(KeyCode.RightArrow) ? 1 : 0) + (Input.GetKey(KeyCode.LeftArrow) ? -1 : 0);
         body.AddForce(direction * xSpeed * Vector2.right);
+
+        //cap velocity if needed
+        if (body.velocity.magnitude > velocityCap)
+        {
+            body.velocity = body.velocity.normalized * velocityCap;
+        }
 
         IncreaseBubbleSize(-sizeDecreaseRate * Time.deltaTime);
     }
