@@ -37,6 +37,7 @@ public class BubbleController : MonoBehaviour
         if (isInLauncher)
         {
             body.velocity = Vector2.zero;
+
             return;
         }
         //apply upwards movement. 
@@ -87,6 +88,7 @@ public class BubbleController : MonoBehaviour
         body.mass = bubbleSize.x;
         transform.localScale = Vector3.one * bubbleSize.x;
         transform.position = startPosition;
+        LevelManager.Instance.ResetLevel();
 
     }
 }
