@@ -7,6 +7,7 @@ public class EndGoal : MonoBehaviour
     private float pullRange;
     [SerializeField]
     private float pullForce;
+    [SerializeField]
     private UnityEvent onCompleteMovement;
 
     private bool completedMovement;
@@ -14,9 +15,7 @@ public class EndGoal : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out BubbleController bubble))
         {
-            //TODO end level. 
             bubble.isInEndZone = true;
-
         }
     }
 

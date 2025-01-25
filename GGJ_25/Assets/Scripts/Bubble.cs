@@ -16,6 +16,5 @@ public class Bubble : MonoBehaviour
             bubble.IncreaseBubbleSize(transform.localScale.x * sizeMultiplier);
             gameObject.SetActive(false);
         }
-
     }
 }
