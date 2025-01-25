@@ -493,6 +493,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5144760413835189962}
   - component: {fileID: 8717253637042771244}
+  - component: {fileID: 8146979627124700000}
   m_Layer: 0
   m_Name: _Main
   m_TagString: Untagged
@@ -567,6 +568,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8146979627124700000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8733342797031817854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d3a77f3b1fae424b9a9bb32beba4c40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frozenSprite: {fileID: 21300000, guid: 9dd7abdd2d1b2fc499857224dd69e6bd, type: 3}
 --- !u!1 &9149232265198547011
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,6 +591,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6161307226298188988}
   - component: {fileID: 368621968327381746}
+  - component: {fileID: 1460714865208747246}
   m_Layer: 0
   m_Name: _Ring
   m_TagString: Untagged
@@ -651,3 +666,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1460714865208747246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9149232265198547011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d3a77f3b1fae424b9a9bb32beba4c40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frozenSprite: {fileID: 21300000, guid: 8b4ca0c0c8aad0645bfa6c66e6a5d801, type: 3}

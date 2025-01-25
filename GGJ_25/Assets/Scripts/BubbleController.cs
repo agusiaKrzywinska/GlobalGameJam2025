@@ -33,6 +33,9 @@ public class BubbleController : MonoBehaviour
     [SerializeField]
     private float velocityCap = 10f;
 
+    private float frozenTimeLeft = 0f;
+    public bool IsFrozen => frozenTimeLeft > 0f;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -63,10 +66,20 @@ public class BubbleController : MonoBehaviour
             return;
         }
 
-        //apply upwards movement. 
-        transform.position += floatUpSpeed * Time.deltaTime * (bubbleSize.y - transform.localScale.x);
+        //setup to sink if frozen. 
+        body.gravityScale = IsFrozen ? 1f : 0f;
+        if (IsFrozen)
+        {
+            frozenTimeLeft -= Time.deltaTime;
+        }
+        else
+        {
+            //apply upwards movement. 
+            transform.position += floatUpSpeed * Time.deltaTime * (bubbleSize.y - transform.localScale.x);
+        }
         //check for left and right movement. 
         float direction = (Input.GetKey(KeyCode.RightArrow) ? 1 : 0) + (Input.GetKey(KeyCode.LeftArrow) ? -1 : 0);
+        //apply movement 
         body.AddForce(direction * xSpeed * Vector2.right);
 
         //cap velocity if needed
@@ -103,6 +116,11 @@ public class BubbleController : MonoBehaviour
 
         transform.localScale = Vector3.one * currentSize;
         body.mass = currentSize;
+    }
+
+    public void FreezeBubble(float timeFrozen)
+    {
+        frozenTimeLeft = timeFrozen;
     }
 
     public void LaunchBubble()

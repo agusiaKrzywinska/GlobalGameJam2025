@@ -6,7 +6,10 @@ public class Hazard : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out BubbleController bubble))
         {
-            bubble.Pop();
+            if (bubble.IsFrozen == false)
+            {
+                bubble.Pop();
+            }
         }
     }
 }

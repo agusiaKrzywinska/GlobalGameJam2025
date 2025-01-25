@@ -8,7 +8,10 @@ public class ForceZone : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out BubbleController bubble))
         {
-            bubble.body.AddForce(force);
+            if (bubble.IsFrozen == false)
+            {
+                bubble.body.AddForce(force);
+            }
         }
     }
 }
