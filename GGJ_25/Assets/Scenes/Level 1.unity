@@ -3294,6 +3294,7 @@ MonoBehaviour:
   launchForce: 10
   sizeDecreaseRate: 0.005
   body: {fileID: 0}
+  velocityCap: 15
 --- !u!4 &1047944765
 Transform:
   m_ObjectHideFlags: 0
