@@ -38,6 +38,9 @@ public class BubbleController : MonoBehaviour
 
     public bool IsGrounded = false;
 
+    [SerializeField]
+    private float offsetSizing = 7f;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -103,6 +106,7 @@ public class BubbleController : MonoBehaviour
 
     public void IncreaseBubbleSize(float amount)
     {
+
         float currentSize = transform.localScale.x + amount;
         if (isInLauncher)
         {
@@ -117,6 +121,10 @@ public class BubbleController : MonoBehaviour
                 currentSize = bubbleSize.x;
                 launcher.increaseBubbleSize = true;
             }
+
+            //find the differece of the scale. 
+            amount = currentSize - transform.localScale.x;
+            transform.position += new Vector3(amount, amount) * offsetSizing;
         }
         else if (currentSize > bubbleSize.y || currentSize < bubbleSize.x)
         {
