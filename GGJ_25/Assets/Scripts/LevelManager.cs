@@ -7,6 +7,8 @@ public class LevelManager : Singleton<LevelManager>
     public List<Bubble> bubblesInLevel = new List<Bubble>();
     public Rigidbody2D[] movedObjects;
     private Vector3[] startPositionsOfMovedObjects;
+
+    public BubbleController mainBubble;
     // Start is called before the first frame update
     void Start()
     {

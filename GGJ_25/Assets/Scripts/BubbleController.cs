@@ -7,6 +7,7 @@ public class BubbleController : MonoBehaviour
     public Vector2 bubbleSize;
 
     public bool isInLauncher = true;
+    public bool isInEndZone = false;
 
     public BubbleLauncher launcher;
     [SerializeField]
@@ -29,6 +30,8 @@ public class BubbleController : MonoBehaviour
         startPosition = transform.position;
         body = GetComponent<Rigidbody2D>();
 
+        LevelManager.Instance.mainBubble = this;
+
     }
 
     // Update is called once per frame
@@ -40,6 +43,12 @@ public class BubbleController : MonoBehaviour
 
             return;
         }
+
+        if (isInEndZone)
+        {
+            return;
+        }
+
         //apply upwards movement. 
         transform.position += floatUpSpeed * Time.deltaTime * (bubbleSize.y - transform.localScale.x);
         //check for left and right movement. 
