@@ -13,6 +13,7 @@ public class EndGoal : MonoBehaviour
     [SerializeField]
     private CinemachineVirtualCamera endCam;
     private bool completedMovement;
+    private bool firedEvent;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.TryGetComponent(out BubbleController bubble))
@@ -23,23 +24,21 @@ public class EndGoal : MonoBehaviour
 
     private void Update()
     {
-        void OnCameraTransition(ICinemachineCamera cam)
-        {
-            onCompleteMovement.Invoke();
-            LevelManager.Instance.brainHelper.OnBlendFinished -= OnCameraTransition;
-        }
-
         if (LevelManager.Instance.mainBubble.isInEndZone && completedMovement == false)
         {
             LevelManager.Instance.mainBubble.body.velocity = Vector3.zero;
             LevelManager.Instance.mainBubble.transform.position = Vector3.MoveTowards(LevelManager.Instance.mainBubble.transform.position, transform.position, pullForce);
             if (LevelManager.Instance.mainBubble.transform.position == transform.position)
             {
-                LevelManager.Instance.brainHelper.OnBlendFinished += OnCameraTransition;
                 endCam.enabled = true;
                 completedMovement = true;
             }
-
+        }
+        else if (completedMovement == true && LevelManager.Instance.brain.IsBlending == false && firedEvent == false)
+        {
+            firedEvent = true;
+            Debug.Log("Triggered!");
+            onCompleteMovement.Invoke();
         }
         else if (completedMovement == false)
         {
