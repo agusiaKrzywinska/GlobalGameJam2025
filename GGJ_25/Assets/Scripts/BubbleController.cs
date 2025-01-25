@@ -36,6 +36,8 @@ public class BubbleController : MonoBehaviour
     private float frozenTimeLeft = 0f;
     public bool IsFrozen => frozenTimeLeft > 0f;
 
+    public bool IsGrounded = false;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -79,8 +81,12 @@ public class BubbleController : MonoBehaviour
         }
         //check for left and right movement. 
         float direction = (Input.GetKey(KeyCode.RightArrow) ? 1 : 0) + (Input.GetKey(KeyCode.LeftArrow) ? -1 : 0);
-        //apply movement 
-        body.AddForce(direction * xSpeed * Vector2.right);
+
+        if (IsFrozen == false || IsGrounded)
+        {
+            //apply movement 
+            body.AddForce(direction * xSpeed * Vector2.right);
+        }
 
         //cap velocity if needed
         if (body.velocity.magnitude > velocityCap)
@@ -88,7 +94,11 @@ public class BubbleController : MonoBehaviour
             body.velocity = body.velocity.normalized * velocityCap;
         }
 
-        IncreaseBubbleSize(-sizeDecreaseRate * Time.deltaTime);
+        //only shrink if not frozen.
+        if (!IsFrozen == false)
+        {
+            IncreaseBubbleSize(-sizeDecreaseRate * Time.deltaTime);
+        }
     }
 
     public void IncreaseBubbleSize(float amount)

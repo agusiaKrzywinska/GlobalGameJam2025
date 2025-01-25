@@ -1,19 +1,13 @@
 using UnityEngine;
 
-public class Hazard : MonoBehaviour
+public class Ground : MonoBehaviour
 {
+    // Start is called before the first frame update
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.TryGetComponent(out BubbleController bubble))
         {
-            if (bubble.IsFrozen == false)
-            {
-                bubble.Pop();
-            }
-            else
-            {
-                bubble.IsGrounded = true;
-            }
+            bubble.IsGrounded = true;
         }
     }
 
