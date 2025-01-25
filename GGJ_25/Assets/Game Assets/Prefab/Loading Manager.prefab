@@ -4909,6 +4909,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyBetweenScenes: 0
   allowOverrideInstances: 0
-  loadScreenUI: {fileID: 0}
+  loadScreenUI: {fileID: 1346653879371135620}
   bufferScene: buffer
   loadingDelay: 1
