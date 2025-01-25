@@ -630,8 +630,9 @@ GameObject:
   - component: {fileID: 6703159438336589688}
   - component: {fileID: 4264539017577878806}
   - component: {fileID: 4022400903455140338}
+  - component: {fileID: -2816048121427408408}
   m_Layer: 0
-  m_Name: Seal
+  m_Name: SealLauncher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -723,6 +724,22 @@ MonoBehaviour:
   bubbleController: {fileID: 0}
   growthRate: 0.1
   increaseBubbleSize: 1
+--- !u!114 &-2816048121427408408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8207833969906592867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b6b9ecedfb9eb4c939bb017f9a5e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generatedComponents:
+  - {fileID: 3892417131460195957}
+  - {fileID: 158809248192045110}
+  - {fileID: 6254994004633408926}
 --- !u!1 &8606498035384210090
 GameObject:
   m_ObjectHideFlags: 0
