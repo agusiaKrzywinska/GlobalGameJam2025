@@ -4631,7 +4631,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 303976719961279874, guid: 166a5f55e66c8a946a6d6dd7ab500ed2, type: 3}
       propertyPath: force.y
-      value: -3
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 2959269223140177334, guid: 166a5f55e66c8a946a6d6dd7ab500ed2, type: 3}
       propertyPath: m_LocalScale.x
