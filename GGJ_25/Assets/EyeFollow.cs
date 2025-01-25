@@ -10,6 +10,7 @@ public class EyeFollow : MonoBehaviour
     void Start()
     {
         mPupilCenterPos = Pupil.position;
+        Player = LevelManager.Instance.mainBubble.transform;
     }
 
     void Update()
