@@ -9,7 +9,7 @@ public class Bubble : MonoBehaviour
         LevelManager.Instance.bubblesInLevel.Add(this);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.TryGetComponent(out BubbleController bubble))
         {
