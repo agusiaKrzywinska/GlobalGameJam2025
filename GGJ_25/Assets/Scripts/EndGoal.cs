@@ -1,3 +1,4 @@
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,7 +10,8 @@ public class EndGoal : MonoBehaviour
     private float pullForce;
     [SerializeField]
     private UnityEvent onCompleteMovement;
-
+    [SerializeField]
+    private CinemachineVirtualCamera endCam;
     private bool completedMovement;
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -27,6 +29,7 @@ public class EndGoal : MonoBehaviour
             LevelManager.Instance.mainBubble.transform.position = Vector3.MoveTowards(LevelManager.Instance.mainBubble.transform.position, transform.position, pullForce);
             if (LevelManager.Instance.mainBubble.transform.position == transform.position)
             {
+                endCam.enabled = true;
                 onCompleteMovement.Invoke();
                 completedMovement = true;
             }

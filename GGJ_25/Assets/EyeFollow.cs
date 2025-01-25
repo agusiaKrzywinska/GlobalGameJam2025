@@ -14,7 +14,10 @@ public class EyeFollow : MonoBehaviour
 
     void Update()
     {
-        Vector3 lookDir = (Player.position - mPupilCenterPos).normalized;
-        Pupil.position = mPupilCenterPos + (lookDir * EyeRadius);
+        if (Player != null)
+        {
+            Vector3 lookDir = (Player.position - mPupilCenterPos).normalized;
+            Pupil.position = mPupilCenterPos + (lookDir * EyeRadius);
+        }
     }
 }

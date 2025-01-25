@@ -42,5 +42,4 @@ public class BubbleLauncher : MonoBehaviour
             bubbleController.isInLauncher = false;
         }
     }
-
 }

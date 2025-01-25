@@ -25,5 +25,13 @@ public class LevelManager : Singleton<LevelManager>
         {
             bubble.gameObject.SetActive(true);
         }
+
+        for (int i = 0; i < movedObjects.Length; i++)
+        {
+            movedObjects[i].velocity = Vector3.zero;
+            movedObjects[i].position = startPositionsOfMovedObjects[i];
+        }
+
+
     }
 }
