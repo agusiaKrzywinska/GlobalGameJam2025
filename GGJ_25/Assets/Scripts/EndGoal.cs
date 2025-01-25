@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EndGoal : MonoBehaviour
 {
@@ -6,6 +7,9 @@ public class EndGoal : MonoBehaviour
     private float pullRange;
     [SerializeField]
     private float pullForce;
+    private UnityEvent onCompleteMovement;
+
+    private bool completedMovement;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.TryGetComponent(out BubbleController bubble))
@@ -18,12 +22,18 @@ public class EndGoal : MonoBehaviour
 
     private void Update()
     {
-        if (LevelManager.Instance.mainBubble.isInEndZone)
+        if (LevelManager.Instance.mainBubble.isInEndZone && completedMovement == false)
         {
             LevelManager.Instance.mainBubble.body.velocity = Vector3.zero;
             LevelManager.Instance.mainBubble.transform.position = Vector3.MoveTowards(LevelManager.Instance.mainBubble.transform.position, transform.position, pullForce);
+            if (LevelManager.Instance.mainBubble.transform.position == transform.position)
+            {
+                onCompleteMovement.Invoke();
+                completedMovement = true;
+            }
+
         }
-        else
+        else if (completedMovement == false)
         {
             Vector3 bubblePos = LevelManager.Instance.mainBubble.transform.position;
             float distanceBetween = Vector3.Distance(bubblePos, transform.position);
