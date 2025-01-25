@@ -49,11 +49,13 @@ public class BubbleController : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        body.mass = bubbleSize.x;
-        transform.localScale = Vector3.one * bubbleSize.x;
 
         startPosition = transform.position;
         body = GetComponent<Rigidbody2D>();
+
+
+        body.mass = bubbleSize.x;
+        transform.localScale = Vector3.one * bubbleSize.x;
 
         LevelManager.Instance.mainBubble = this;
 
