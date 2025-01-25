@@ -40,7 +40,7 @@ public class BubbleController : MonoBehaviour
             return;
         }
         //apply upwards movement. 
-        body.AddForce(floatUpSpeed);
+        transform.position += floatUpSpeed * Time.deltaTime * (bubbleSize.y - transform.localScale.x);
         //check for left and right movement. 
         float direction = (Input.GetKey(KeyCode.RightArrow) ? 1 : 0) + (Input.GetKey(KeyCode.LeftArrow) ? -1 : 0);
         body.AddForce(direction * xSpeed * Vector2.right);
