@@ -802,6 +802,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   endCam: {fileID: 9184723741553905750}
+  sealPoint: {fileID: 8945949688526036768}
 --- !u!58 &2468134209268403839
 CircleCollider2D:
   m_ObjectHideFlags: 0

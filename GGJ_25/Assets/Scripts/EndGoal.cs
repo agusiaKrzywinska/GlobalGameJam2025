@@ -14,6 +14,14 @@ public class EndGoal : MonoBehaviour
     private CinemachineVirtualCamera endCam;
     private bool completedMovement;
     private bool firedEvent;
+    [SerializeField]
+    private Transform sealPoint;
+
+    private BubbleLauncher launcher;
+    private void Start()
+    {
+        launcher = FindAnyObjectByType<BubbleLauncher>();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.TryGetComponent(out BubbleController bubble))
@@ -30,6 +38,7 @@ public class EndGoal : MonoBehaviour
             LevelManager.Instance.mainBubble.transform.position = Vector3.MoveTowards(LevelManager.Instance.mainBubble.transform.position, transform.position, pullForce);
             if (LevelManager.Instance.mainBubble.transform.position == transform.position)
             {
+                launcher.transform.position = sealPoint.position;
                 endCam.enabled = true;
                 completedMovement = true;
             }
@@ -37,7 +46,6 @@ public class EndGoal : MonoBehaviour
         else if (completedMovement == true && LevelManager.Instance.brain.IsBlending == false && firedEvent == false)
         {
             firedEvent = true;
-            Debug.Log("Triggered!");
             onCompleteMovement.Invoke();
         }
         else if (completedMovement == false)
