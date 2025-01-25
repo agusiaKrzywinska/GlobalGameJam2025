@@ -336,6 +336,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &216006229
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5765408445050402461, guid: ff98b772b7f5ca24a9ceba5973ec2e40, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5765408445050402461, guid: ff98b772b7f5ca24a9ceba5973ec2e40, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5765408445050402461, guid: ff98b772b7f5ca24a9ceba5973ec2e40, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5765408445050402461, guid: ff98b772b7f5ca24a9ceba5973ec2e40, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5765408445050402461, guid: ff98b772b7f5ca24a9ceba5973ec2e40, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5765408445050402461, guid: ff98b772b7f5ca24a9ceba5973ec2e40, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5765408445050402461, guid: ff98b772b7f5ca24a9ceba5973ec2e40, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5765408445050402461, guid: ff98b772b7f5ca24a9ceba5973ec2e40, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5765408445050402461, guid: ff98b772b7f5ca24a9ceba5973ec2e40, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5765408445050402461, guid: ff98b772b7f5ca24a9ceba5973ec2e40, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5957295200860371568, guid: ff98b772b7f5ca24a9ceba5973ec2e40, type: 3}
+      propertyPath: m_Name
+      value: Loading Manager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ff98b772b7f5ca24a9ceba5973ec2e40, type: 3}
 --- !u!1 &260393295
 GameObject:
   m_ObjectHideFlags: 0
@@ -3825,6 +3882,7 @@ MonoBehaviour:
   bubbleSize: {x: 0.05, y: 0.35}
   isInLauncher: 1
   isInEndZone: 0
+  goNext: 0
   launcher: {fileID: 1569769949}
   floatUpSpeed: {x: 0, y: 5, z: 0}
   xSpeed: 0.2
@@ -4486,7 +4544,7 @@ Transform:
   m_GameObject: {fileID: 1310057221}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.482252, y: 0.036866188, z: -10}
+  m_LocalPosition: {x: -3.4559593, y: 0.036866188, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4962,6 +5020,9 @@ MonoBehaviour:
   mainBubble: {fileID: 0}
   brain: {fileID: 0}
   brainHelper: {fileID: 0}
+  poems: {fileID: 0}
+  peomDisplayer: {fileID: 0}
+  nextLevel: Level 2
 --- !u!4 &1381391102
 Transform:
   m_ObjectHideFlags: 0
@@ -7141,3 +7202,4 @@ SceneRoots:
   - {fileID: 783058086}
   - {fileID: 397061852}
   - {fileID: 677361357}
+  - {fileID: 216006229}

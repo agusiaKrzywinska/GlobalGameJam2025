@@ -1,3 +1,4 @@
+using Febucci.UI.Core;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -19,6 +20,9 @@ public class LevelManager : Singleton<LevelManager>
     private PoemManager poems;
     [SerializeField]
     private TextMeshPro peomDisplayer;
+    private TypewriterCore typeWriter;
+    [NaughtyAttributes.Scene]
+    public string nextLevel;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +32,8 @@ public class LevelManager : Singleton<LevelManager>
         peomDisplayer.text = poems.poems[Random.Range(0, poems.poems.Length)];
 
         startPositionsOfMovedObjects = new Vector3[movedObjects.Length];
+        typeWriter = peomDisplayer.GetComponent<TypewriterCore>();
+        typeWriter.onTextShowed.AddListener(() => mainBubble.goNext = true);
         for (int i = 0; i < movedObjects.Length; i++)
         {
             startPositionsOfMovedObjects[i] = movedObjects[i].transform.position;
@@ -51,7 +57,5 @@ public class LevelManager : Singleton<LevelManager>
             movedObjects[i].velocity = Vector3.zero;
             movedObjects[i].position = startPositionsOfMovedObjects[i];
         }
-
-
     }
 }

@@ -1,3 +1,4 @@
+using ANT;
 using NaughtyAttributes;
 using UnityEngine;
 
@@ -6,8 +7,12 @@ public class BubbleController : MonoBehaviour
     [MinMaxSlider(0f, 10f)]
     public Vector2 bubbleSize;
 
+    [HideInInspector]
     public bool isInLauncher = true;
+    [HideInInspector]
     public bool isInEndZone = false;
+    [HideInInspector]
+    public bool goNext = false;
 
     public BubbleLauncher launcher;
     [SerializeField]
@@ -24,6 +29,7 @@ public class BubbleController : MonoBehaviour
     private Vector3 startPosition;
     [HideInInspector]
     public Rigidbody2D body;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -37,6 +43,11 @@ public class BubbleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (goNext && Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            LoadingManager.Instance.LoadScene(LevelManager.Instance.nextLevel);
+        }
+
         if (isInLauncher)
         {
             body.velocity = Vector2.zero;
