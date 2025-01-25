@@ -20,7 +20,7 @@ public class Bubble : MonoBehaviour
 
     private void OnDestroy()
     {
-        LevelManager.Instance.bubblesInLevel.Remove(this);
+        LevelManager.Instance?.bubblesInLevel.Remove(this);
     }
 
     private void Update()

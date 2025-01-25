@@ -23,14 +23,20 @@ public class EndGoal : MonoBehaviour
 
     private void Update()
     {
+        void OnCameraTransition(ICinemachineCamera cam)
+        {
+            onCompleteMovement.Invoke();
+            LevelManager.Instance.brainHelper.OnBlendFinished -= OnCameraTransition;
+        }
+
         if (LevelManager.Instance.mainBubble.isInEndZone && completedMovement == false)
         {
             LevelManager.Instance.mainBubble.body.velocity = Vector3.zero;
             LevelManager.Instance.mainBubble.transform.position = Vector3.MoveTowards(LevelManager.Instance.mainBubble.transform.position, transform.position, pullForce);
             if (LevelManager.Instance.mainBubble.transform.position == transform.position)
             {
+                LevelManager.Instance.brainHelper.OnBlendFinished += OnCameraTransition;
                 endCam.enabled = true;
-                onCompleteMovement.Invoke();
                 completedMovement = true;
             }
 

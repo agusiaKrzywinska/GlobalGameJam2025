@@ -9,9 +9,14 @@ public class LevelManager : Singleton<LevelManager>
     private Vector3[] startPositionsOfMovedObjects;
 
     public BubbleController mainBubble;
+    public Cinemachine.CinemachineBrain brain;
+    public CameraBrainEventsHandler brainHelper;
     // Start is called before the first frame update
     void Start()
     {
+        brain = FindObjectOfType<Cinemachine.CinemachineBrain>();
+        brainHelper = brain.GetComponent<CameraBrainEventsHandler>();
+
         startPositionsOfMovedObjects = new Vector3[movedObjects.Length];
         for (int i = 0; i < movedObjects.Length; i++)
         {

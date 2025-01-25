@@ -25,7 +25,7 @@ public class BubbleController : MonoBehaviour
     [HideInInspector]
     public Rigidbody2D body;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         startPosition = transform.position;
         body = GetComponent<Rigidbody2D>();
