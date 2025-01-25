@@ -21,7 +21,8 @@ public class BubbleController : MonoBehaviour
     [SerializeField]
     private float sizeDecreaseRate = 0.01f;
     private Vector3 startPosition;
-    private Rigidbody2D body;
+    [HideInInspector]
+    public Rigidbody2D body;
     // Start is called before the first frame update
     void Start()
     {
