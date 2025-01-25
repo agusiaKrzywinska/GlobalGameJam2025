@@ -1,6 +1,8 @@
 using ANT;
 using NaughtyAttributes;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BubbleController : MonoBehaviour
 {
@@ -36,14 +38,20 @@ public class BubbleController : MonoBehaviour
     private float frozenTimeLeft = 0f;
     public bool IsFrozen => frozenTimeLeft > 0f;
 
-    public bool IsGrounded = false;
+    public List<Ground> IsGrounded = new List<Ground>();
 
     [SerializeField]
     private float offsetSizing = 7f;
 
+    [SerializeField]
+    private UnityEvent onPop;
+
     // Start is called before the first frame update
     void Awake()
     {
+        body.mass = bubbleSize.x;
+        transform.localScale = Vector3.one * bubbleSize.x;
+
         startPosition = transform.position;
         body = GetComponent<Rigidbody2D>();
 
@@ -85,7 +93,7 @@ public class BubbleController : MonoBehaviour
         //check for left and right movement. 
         float direction = (Input.GetKey(KeyCode.RightArrow) ? 1 : 0) + (Input.GetKey(KeyCode.LeftArrow) ? -1 : 0);
 
-        if (IsFrozen == false || IsGrounded)
+        if (IsFrozen == false || IsGrounded.Count > 0)
         {
             //apply movement 
             body.AddForce(direction * xSpeed * Vector2.right);
@@ -150,10 +158,13 @@ public class BubbleController : MonoBehaviour
     {
         //todo show explosion effect. 
         isInLauncher = true;
+        onPop.Invoke();
         body.mass = bubbleSize.x;
         transform.localScale = Vector3.one * bubbleSize.x;
         transform.position = startPosition;
         LevelManager.Instance.ResetLevel();
+
+        IsGrounded.Clear();
 
     }
 }

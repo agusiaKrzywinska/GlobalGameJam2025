@@ -10,18 +10,6 @@ public class Hazard : MonoBehaviour
             {
                 bubble.Pop();
             }
-            else
-            {
-                bubble.IsGrounded = true;
-            }
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.TryGetComponent(out BubbleController bubble))
-        {
-            bubble.IsGrounded = false;
         }
     }
 }

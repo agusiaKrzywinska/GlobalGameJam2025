@@ -7,7 +7,7 @@ public class Ground : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out BubbleController bubble))
         {
-            bubble.IsGrounded = true;
+            bubble.IsGrounded.Add(this);
         }
     }
 
@@ -15,7 +15,7 @@ public class Ground : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out BubbleController bubble))
         {
-            bubble.IsGrounded = false;
+            bubble.IsGrounded.Remove(this);
         }
     }
 }
