@@ -98,7 +98,7 @@ public class BubbleController : MonoBehaviour
         }
 
         //only shrink if not frozen.
-        if (!IsFrozen == false)
+        if (IsFrozen == false)
         {
             IncreaseBubbleSize(-sizeDecreaseRate * Time.deltaTime);
         }
