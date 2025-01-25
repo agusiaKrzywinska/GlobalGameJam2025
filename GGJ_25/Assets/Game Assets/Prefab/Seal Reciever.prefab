@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1389044078513447328}
   - component: {fileID: 2807745183475737583}
-  - component: {fileID: 7782745692770765752}
   m_Layer: 0
   m_Name: Seal Shadow
   m_TagString: Untagged
@@ -85,21 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7782745692770765752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 22373508926579006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff5718dd69a09e24c9195882898f88de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bubbleController: {fileID: 0}
-  growthRate: 0.1
-  increaseBubbleSize: 1
 --- !u!1 &853316195453412547
 GameObject:
   m_ObjectHideFlags: 0
