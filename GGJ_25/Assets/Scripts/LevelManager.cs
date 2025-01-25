@@ -21,9 +21,14 @@ public class LevelManager : Singleton<LevelManager>
 
     public void ResetLevel()
     {
-        foreach (var bubble in bubblesInLevel)
+        for (int i = bubblesInLevel.Count - 1; i >= 0; i--)
         {
-            bubble.gameObject.SetActive(true);
+            bubblesInLevel[i].transform.position = bubblesInLevel[i].startPosition;
+            bubblesInLevel[i].gameObject.SetActive(true);
+            if (bubblesInLevel[i].isSpawned)
+            {
+                Destroy(bubblesInLevel[i].gameObject);
+            }
         }
 
         for (int i = 0; i < movedObjects.Length; i++)
