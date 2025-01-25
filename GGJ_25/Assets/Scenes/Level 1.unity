@@ -936,7 +936,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Hit these bubbles to help your grow.
+  m_text: 'Hit these bubbles to help you grow.
 
     But with enough size your power
     shows.
@@ -5427,6 +5427,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1568666033}
     m_Modifications:
+    - target: {fileID: 2807745183475737583, guid: 5f57c75b1acb7e747bb88c642ef5e1dd, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4022400903455140338, guid: 5f57c75b1acb7e747bb88c642ef5e1dd, type: 3}
       propertyPath: brain
       value: 
@@ -5796,6 +5800,10 @@ PrefabInstance:
     - target: {fileID: 7948502207684880819, guid: 40b336046afada64fb31db4b9f1cc276, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945949688526036768, guid: 40b336046afada64fb31db4b9f1cc276, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.24
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
