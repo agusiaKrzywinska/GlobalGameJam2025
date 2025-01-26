@@ -166,7 +166,6 @@ public class BubbleController : MonoBehaviour
 
     public void IncreaseBubbleSize(float amount)
     {
-
         float currentSize = transform.localScale.x + amount;
         if (isInLauncher)
         {
@@ -210,6 +209,7 @@ public class BubbleController : MonoBehaviour
 
     public void Pop()
     {
+        if (popEffect.isEmitting) return;
         //todo show explosion effect. 
         visrep.SetActive(false);
         popEffect.Play();
