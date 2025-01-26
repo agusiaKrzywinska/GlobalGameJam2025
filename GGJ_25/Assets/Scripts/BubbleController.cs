@@ -60,10 +60,15 @@ public class BubbleController : MonoBehaviour
 
     private float maxFreezeTime = 1f;
 
+    [SerializeField]
+    private ParticleSystem popEffect;
+    [SerializeField]
+    private GameObject visrep;
+
+
     // Start is called before the first frame update
     void Awake()
     {
-
         startPosition = transform.position;
         body = GetComponent<Rigidbody2D>();
 
@@ -78,6 +83,8 @@ public class BubbleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (visrep.activeInHierarchy == false) return;
+
         if (goNext && Input.GetKeyDown(KeyCode.RightArrow))
         {
             LoadingManager.Instance.LoadScene(LevelManager.Instance.nextLevel);
@@ -188,15 +195,20 @@ public class BubbleController : MonoBehaviour
     public void Pop()
     {
         //todo show explosion effect. 
+        visrep.SetActive(false);
+        popEffect.Play();
         sfx.PlaySFX(BubbleSFXManager.SoundType.Bubble_Pop);
-        isInLauncher = true;
-        onPop.Invoke();
-        body.mass = bubbleSize.x;
-        transform.localScale = Vector3.one * bubbleSize.x;
-        transform.position = startPosition;
-        LevelManager.Instance.ResetLevel();
-
-        IsGrounded.Clear();
+        this.DelayedExecute(popEffect.main.duration, () =>
+        {
+            visrep.SetActive(true);
+            isInLauncher = true;
+            onPop.Invoke();
+            body.mass = bubbleSize.x;
+            transform.localScale = Vector3.one * bubbleSize.x;
+            transform.position = startPosition;
+            LevelManager.Instance.ResetLevel();
+            IsGrounded.Clear();
+        });
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
