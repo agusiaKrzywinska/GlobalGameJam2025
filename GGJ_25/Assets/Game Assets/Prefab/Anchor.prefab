@@ -460,7 +460,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -512,8 +512,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21800062c8ef70a419e782e24930359d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeWhilePlaying: 0
-  rePlayActiveSound: 0
+  changeWhilePlaying: 1
+  rePlayActiveSound: 1
   allowQueuingSounds: 0
   pauseWithTimeScale: 1
   playOnEnableSfx: {fileID: 11400000, guid: 44bc2a8c8cb82a849804e9f249a536e0, type: 2}
