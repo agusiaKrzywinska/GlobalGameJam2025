@@ -3509,7 +3509,6 @@ GameObject:
   - component: {fileID: 1304120115}
   - component: {fileID: 1304120114}
   - component: {fileID: 1304120113}
-  - component: {fileID: 1304120116}
   m_Layer: 0
   m_Name: Music Player
   m_TagString: Untagged
@@ -3647,46 +3646,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1304120116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1304120112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af72abfecdf8ddc408190ca5eb2ed8c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onAwake:
-    m_PersistentCalls:
-      m_Calls: []
-  onStart:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1304120113}
-        m_TargetAssemblyTypeName: ANT.Audio.SFXPlayer, Assembly-CSharp
-        m_MethodName: PlaySound
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: db9d327a19990c149b86d0f4fc7990d1, type: 2}
-          m_ObjectArgumentAssemblyTypeName: ANT.Audio.SoundDataHolder, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onEnable:
-    m_PersistentCalls:
-      m_Calls: []
-  onDisable:
-    m_PersistentCalls:
-      m_Calls: []
-  onValidate:
-    m_PersistentCalls:
-      m_Calls: []
-  runOnValidate: 0
 --- !u!1 &1310057221
 GameObject:
   m_ObjectHideFlags: 0
@@ -3775,7 +3734,7 @@ Transform:
   m_GameObject: {fileID: 1310057221}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.482252, y: 0.036866188, z: -10}
+  m_LocalPosition: {x: -3.4559593, y: 0.036866188, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

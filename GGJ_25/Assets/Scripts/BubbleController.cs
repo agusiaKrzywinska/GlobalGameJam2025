@@ -35,6 +35,9 @@ public class BubbleController : MonoBehaviour
     [SerializeField]
     private float velocityCap = 10f;
 
+    [SerializeField]
+    private float sfxThresholdSpeed = 5f;
+
     private float frozenTimeLeft = 0f;
     public bool IsFrozen => frozenTimeLeft > 0f;
 
@@ -112,6 +115,19 @@ public class BubbleController : MonoBehaviour
             body.velocity = body.velocity.normalized * velocityCap;
         }
 
+        if (body.velocity.magnitude >= sfxThresholdSpeed && (IsFrozen == false))
+        {
+            sfx.PlaySFX(BubbleSFXManager.SoundType.Bubble_Move);
+        }
+        else
+        {
+            sfx.StopSFX(BubbleSFXManager.SoundType.Bubble_Move);
+        }
+
+
+
+
+
         //only shrink if not frozen.
         if (IsFrozen == false)
         {
@@ -178,15 +194,18 @@ public class BubbleController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (IsFrozen)
+        if (body.velocity.magnitude >= sfxThresholdSpeed)
         {
-            sfx.PlaySFX(BubbleSFXManager.SoundType.Bubble_Frozen_Impact);
-        }
-        else
-        {
-            sfx.PlaySFX(BubbleSFXManager.SoundType.Bubble_Impact);
-            //spawn hit Ps at collision point
-            Destroy(Instantiate(hitParticle, collision.contacts[0].point, Quaternion.Euler((Vector3)(collision.contacts[0].point) - transform.position)), hitParticle.main.duration);
+            if (IsFrozen)
+            {
+                sfx.PlaySFX(BubbleSFXManager.SoundType.Bubble_Frozen_Impact);
+            }
+            else
+            {
+                sfx.PlaySFX(BubbleSFXManager.SoundType.Bubble_Impact);
+                //spawn hit Ps at collision point
+                Destroy(Instantiate(hitParticle, collision.contacts[0].point, Quaternion.Euler((Vector3)(collision.contacts[0].point) - transform.position)), hitParticle.main.duration);
+            }
         }
     }
 }

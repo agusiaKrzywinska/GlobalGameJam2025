@@ -61,7 +61,7 @@ MonoBehaviour:
   goNext: 0
   launcher: {fileID: 0}
   floatUpSpeed: {x: 0, y: 5, z: 0}
-  xSpeed: 0.2
+  xSpeed: 1
   launchForce: 10
   sizeDecreaseRate: 0.005
   body: {fileID: 0}

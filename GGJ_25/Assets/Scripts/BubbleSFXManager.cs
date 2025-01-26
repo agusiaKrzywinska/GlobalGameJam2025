@@ -14,6 +14,12 @@ public class BubbleSFXManager : MonoBehaviour
         player.Play();
     }
 
+    public void StopSFX(SoundType type)
+    {
+        var player = soundEffects.FirstOrDefault(x => x.type == type).player;
+        player.Stop();
+    }
+
     [System.Serializable]
     public class SFX
     {
