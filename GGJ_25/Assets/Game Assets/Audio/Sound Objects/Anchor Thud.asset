@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd8975064c8771c408a5ae640ba51a5b, type: 3}
+  m_Name: Anchor Thud
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3b5634819b2f57041b104d468dcab00c, type: 3}
+  isLooping: 0
+  volume: 1
+  lowPitch: 1
+  highPitch: 1
