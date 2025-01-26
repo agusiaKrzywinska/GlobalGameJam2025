@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using ANT.Audio;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace ANT
 {
@@ -41,6 +40,11 @@ namespace ANT
         [SerializeField, Tooltip("All the sound effects that play when the screen first shows up.")]
         private SoundDataHolder[] onLoadWindowSfx;
 
+        [SerializeField]
+        private Button leftButton;
+        [SerializeField]
+        private Button rightButton;
+
         private void Awake()
         {
             SetupWindow();
@@ -51,6 +55,19 @@ namespace ANT
             }
 
             Show();
+        }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                leftButton.onClick.Invoke();
+            }
+            else if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                rightButton.onClick.Invoke();
+            }
+
         }
 
         public void Show()
