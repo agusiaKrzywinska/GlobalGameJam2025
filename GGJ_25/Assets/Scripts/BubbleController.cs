@@ -83,8 +83,12 @@ public class BubbleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (visrep.activeInHierarchy == false) return;
-
+        if (visrep.activeInHierarchy == false)
+        {
+            body.velocity = Vector2.zero;
+            sfx.StopSFX(BubbleSFXManager.SoundType.Bubble_Move);
+            return;
+        }
         if (goNext && Input.GetKeyDown(KeyCode.RightArrow))
         {
             LoadingManager.Instance.LoadScene(LevelManager.Instance.nextLevel);
@@ -93,12 +97,13 @@ public class BubbleController : MonoBehaviour
         if (isInLauncher)
         {
             body.velocity = Vector2.zero;
-
+            sfx.StopSFX(BubbleSFXManager.SoundType.Bubble_Move);
             return;
         }
 
         if (isInEndZone)
         {
+            sfx.StopSFX(BubbleSFXManager.SoundType.Bubble_Move);
             return;
         }
 
