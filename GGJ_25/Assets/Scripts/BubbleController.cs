@@ -46,6 +46,9 @@ public class BubbleController : MonoBehaviour
     [SerializeField]
     private UnityEvent onPop;
 
+    [SerializeField]
+    private ParticleSystem hitParticle;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -167,6 +170,11 @@ public class BubbleController : MonoBehaviour
         LevelManager.Instance.ResetLevel();
 
         IsGrounded.Clear();
+    }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //spawn hit Ps at collision point
+        Destroy(Instantiate(hitParticle, collision.contacts[0].point, Quaternion.Euler((Vector3)(collision.contacts[0].point) - transform.position)), hitParticle.main.duration);
     }
 }
