@@ -3,6 +3,7 @@ using NaughtyAttributes;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class BubbleController : MonoBehaviour
 {
@@ -53,6 +54,11 @@ public class BubbleController : MonoBehaviour
     private ParticleSystem hitParticle;
 
     public BubbleSFXManager sfx;
+
+    [SerializeField]
+    private Image freezeTimer;
+
+    private float maxFreezeTime = 1f;
 
     // Start is called before the first frame update
     void Awake()
@@ -125,7 +131,7 @@ public class BubbleController : MonoBehaviour
         }
 
 
-
+        freezeTimer.fillAmount = frozenTimeLeft / maxFreezeTime;
 
 
         //only shrink if not frozen.
@@ -169,6 +175,7 @@ public class BubbleController : MonoBehaviour
 
     public void FreezeBubble(float timeFrozen)
     {
+        maxFreezeTime = timeFrozen;
         sfx.PlaySFX(BubbleSFXManager.SoundType.Bubble_Freeze);
         frozenTimeLeft = timeFrozen;
     }
