@@ -21,6 +21,12 @@ public class BubbleSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (LevelManager.Instance.mainBubble.isInLauncher || LevelManager.Instance.mainBubble.isInEndZone)
+        {
+            currentSpawnRate = 0f;
+            return;
+        }
+
         currentSpawnRate += Time.deltaTime;
         if (currentSpawnRate >= spawnRate)
         {
