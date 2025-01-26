@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd8975064c8771c408a5ae640ba51a5b, type: 3}
   m_Name: Anchor Thud
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: 3b5634819b2f57041b104d468dcab00c, type: 3}
+  clip: {fileID: 8300000, guid: 3335cb5b216f7534abafbb94e741ec5b, type: 3}
   isLooping: 0
   volume: 1
   lowPitch: 1
