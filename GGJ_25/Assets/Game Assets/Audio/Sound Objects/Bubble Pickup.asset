@@ -15,5 +15,5 @@ MonoBehaviour:
   clip: {fileID: 8300000, guid: 7daa31a52bd0def4a968cb465270003d, type: 3}
   isLooping: 0
   volume: 1
-  lowPitch: 1
-  highPitch: 1
+  lowPitch: 0.8
+  highPitch: 1.1
