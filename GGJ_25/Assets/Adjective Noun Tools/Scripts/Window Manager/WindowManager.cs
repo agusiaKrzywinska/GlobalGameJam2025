@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using ANT.Audio;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -24,7 +23,7 @@ namespace ANT
         /// The sound effect player that all the window sounds play from. 
         /// </summary>
         public static SFXPlayer Player => Instance.player;
-        
+
         /// <summary>
         /// a bool to check if you should clear the audio queue. 
         /// </summary>
@@ -87,7 +86,7 @@ namespace ANT
             // if there is a window already showing then hide it unless it's me. 
             if (CurrentOpenWindows.Count > 0 && CurrentOpenWindows.Peek() != window)
                 CurrentOpenWindows.Peek().Hide();
-            
+
             // if the window doesn't contain this one then add it. 
             if (!CurrentOpenWindows.Contains(window))
                 CurrentOpenWindows.Push(window);
