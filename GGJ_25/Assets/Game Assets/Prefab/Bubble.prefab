@@ -73,6 +73,7 @@ MonoBehaviour:
   freezeTimer: {fileID: 490013136852021406}
   popEffect: {fileID: 1470850219937710253}
   visrep: {fileID: 3205261164046637059}
+  trailEffect: {fileID: 3622120584501488602}
 --- !u!50 &5146384104941197047
 Rigidbody2D:
   serializedVersion: 4

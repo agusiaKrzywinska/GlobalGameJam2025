@@ -65,6 +65,8 @@ public class BubbleController : MonoBehaviour
     [SerializeField]
     private GameObject visrep;
 
+    [SerializeField]
+    private ParticleSystem trailEffect;
 
     // Start is called before the first frame update
     void Awake()
@@ -125,6 +127,15 @@ public class BubbleController : MonoBehaviour
         {
             //apply movement 
             body.AddForce(direction * xSpeed * Vector2.right);
+        }
+
+        if (IsFrozen)
+        {
+            trailEffect.Stop();
+        }
+        else if (trailEffect.isEmitting == false)
+        {
+            trailEffect.Play();
         }
 
         //cap velocity if needed
