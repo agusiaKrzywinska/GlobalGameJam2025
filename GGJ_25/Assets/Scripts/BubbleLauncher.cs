@@ -1,3 +1,4 @@
+using ANT;
 using UnityEngine;
 
 public class BubbleLauncher : MonoBehaviour
@@ -12,15 +13,18 @@ public class BubbleLauncher : MonoBehaviour
     [SerializeField]
     private Cinemachine.CinemachineBrain brain;
 
+    bool startDelay = true;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        this.DelayedExecute(3f, () => startDelay = false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (startDelay) return;
         if (bubbleController.isInLauncher == false) return;
 
         if (Input.GetKeyDown(KeyCode.LeftArrow))
