@@ -66,13 +66,14 @@ MonoBehaviour:
   sizeDecreaseRate: 0.005
   body: {fileID: 0}
   velocityCap: 10
+  sfxThresholdSpeed: 2
   IsGrounded: []
   offsetSizing: 7
   onPop:
     m_PersistentCalls:
       m_Calls: []
   hitParticle: {fileID: 58087607233661044, guid: de029e8cd6f04c64fa0265db81a7beb9, type: 3}
-  sfx: {fileID: 0}
+  sfx: {fileID: 6575259152195347640}
 --- !u!50 &5146384104941197047
 Rigidbody2D:
   serializedVersion: 4
