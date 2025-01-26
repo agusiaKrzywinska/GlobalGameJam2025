@@ -9,6 +9,7 @@ public class LevelManager : Singleton<LevelManager>
     public List<Bubble> bubblesInLevel = new List<Bubble>();
     public Rigidbody2D[] movedObjects;
     private Vector3[] startPositionsOfMovedObjects;
+    private Quaternion[] startRotationsOfMovedObjects;
     [HideInInspector]
     public BubbleController mainBubble;
     [HideInInspector]
@@ -31,12 +32,19 @@ public class LevelManager : Singleton<LevelManager>
 
         peomDisplayer.text = poems.poems[Random.Range(0, poems.poems.Length)];
 
-        startPositionsOfMovedObjects = new Vector3[movedObjects.Length];
         typeWriter = peomDisplayer.GetComponent<TypewriterCore>();
         typeWriter.onTextShowed.AddListener(() => mainBubble.goNext = true);
+
+        startPositionsOfMovedObjects = new Vector3[movedObjects.Length];
         for (int i = 0; i < movedObjects.Length; i++)
         {
             startPositionsOfMovedObjects[i] = movedObjects[i].transform.position;
+        }
+
+        startRotationsOfMovedObjects = new Quaternion[movedObjects.Length];
+        for (int i = 0; i < movedObjects.Length; i++)
+        {
+            startRotationsOfMovedObjects[i] = movedObjects[i].transform.rotation;
         }
     }
 
@@ -55,6 +63,7 @@ public class LevelManager : Singleton<LevelManager>
         for (int i = 0; i < movedObjects.Length; i++)
         {
             movedObjects[i].velocity = Vector3.zero;
+            movedObjects[i].transform.rotation = startRotationsOfMovedObjects[i];
             movedObjects[i].position = startPositionsOfMovedObjects[i];
         }
     }
