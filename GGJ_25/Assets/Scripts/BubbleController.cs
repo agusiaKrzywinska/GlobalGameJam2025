@@ -49,6 +49,8 @@ public class BubbleController : MonoBehaviour
     [SerializeField]
     private ParticleSystem hitParticle;
 
+    public BubbleSFXManager sfx;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -56,12 +58,12 @@ public class BubbleController : MonoBehaviour
         startPosition = transform.position;
         body = GetComponent<Rigidbody2D>();
 
+        sfx = GetComponent<BubbleSFXManager>();
 
         body.mass = bubbleSize.x;
         transform.localScale = Vector3.one * bubbleSize.x;
 
         LevelManager.Instance.mainBubble = this;
-
     }
 
     // Update is called once per frame
@@ -151,6 +153,7 @@ public class BubbleController : MonoBehaviour
 
     public void FreezeBubble(float timeFrozen)
     {
+        sfx.PlaySFX(BubbleSFXManager.SoundType.Bubble_Freeze);
         frozenTimeLeft = timeFrozen;
     }
 
@@ -162,6 +165,7 @@ public class BubbleController : MonoBehaviour
     public void Pop()
     {
         //todo show explosion effect. 
+        sfx.PlaySFX(BubbleSFXManager.SoundType.Bubble_Pop);
         isInLauncher = true;
         onPop.Invoke();
         body.mass = bubbleSize.x;
@@ -174,7 +178,15 @@ public class BubbleController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //spawn hit Ps at collision point
-        Destroy(Instantiate(hitParticle, collision.contacts[0].point, Quaternion.Euler((Vector3)(collision.contacts[0].point) - transform.position)), hitParticle.main.duration);
+        if (IsFrozen)
+        {
+            sfx.PlaySFX(BubbleSFXManager.SoundType.Bubble_Frozen_Impact);
+        }
+        else
+        {
+            sfx.PlaySFX(BubbleSFXManager.SoundType.Bubble_Impact);
+            //spawn hit Ps at collision point
+            Destroy(Instantiate(hitParticle, collision.contacts[0].point, Quaternion.Euler((Vector3)(collision.contacts[0].point) - transform.position)), hitParticle.main.duration);
+        }
     }
 }

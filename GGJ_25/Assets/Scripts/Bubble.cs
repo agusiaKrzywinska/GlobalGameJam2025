@@ -34,6 +34,7 @@ public class Bubble : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out BubbleController bubble))
         {
+            bubble.sfx.PlaySFX(BubbleSFXManager.SoundType.Bubble_Pickup);
             bubble.IncreaseBubbleSize(transform.localScale.x * sizeMultiplier);
             gameObject.SetActive(false);
         }
