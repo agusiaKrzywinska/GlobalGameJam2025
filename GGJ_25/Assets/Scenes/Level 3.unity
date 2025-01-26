@@ -816,6 +816,7 @@ GameObject:
   - component: {fileID: 245652370}
   - component: {fileID: 245652369}
   - component: {fileID: 245652368}
+  - component: {fileID: 245652371}
   m_Layer: 0
   m_Name: Rock2 (2)
   m_TagString: Untagged
@@ -933,6 +934,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 245652366}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &245652371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245652366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d31815f59b1f3d9488a3e8e98c992336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &260393295
 GameObject:
   m_ObjectHideFlags: 0
@@ -1261,6 +1274,7 @@ GameObject:
   - component: {fileID: 562289880}
   - component: {fileID: 562289879}
   - component: {fileID: 562289878}
+  - component: {fileID: 562289881}
   m_Layer: 0
   m_Name: Rock2 (9)
   m_TagString: Untagged
@@ -1378,6 +1392,75 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562289876}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &562289881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562289876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d31815f59b1f3d9488a3e8e98c992336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &576035028
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1968773581003175366, guid: 4cb1b033eaddf2a4b80f4dddf03dea82, type: 3}
+      propertyPath: m_Name
+      value: Bonus Bubble 1 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204827297588819561, guid: 4cb1b033eaddf2a4b80f4dddf03dea82, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 40.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204827297588819561, guid: 4cb1b033eaddf2a4b80f4dddf03dea82, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204827297588819561, guid: 4cb1b033eaddf2a4b80f4dddf03dea82, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204827297588819561, guid: 4cb1b033eaddf2a4b80f4dddf03dea82, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204827297588819561, guid: 4cb1b033eaddf2a4b80f4dddf03dea82, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204827297588819561, guid: 4cb1b033eaddf2a4b80f4dddf03dea82, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204827297588819561, guid: 4cb1b033eaddf2a4b80f4dddf03dea82, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204827297588819561, guid: 4cb1b033eaddf2a4b80f4dddf03dea82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204827297588819561, guid: 4cb1b033eaddf2a4b80f4dddf03dea82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204827297588819561, guid: 4cb1b033eaddf2a4b80f4dddf03dea82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4cb1b033eaddf2a4b80f4dddf03dea82, type: 3}
 --- !u!1 &579231245
 GameObject:
   m_ObjectHideFlags: 0
@@ -1531,6 +1614,7 @@ GameObject:
   - component: {fileID: 665422856}
   - component: {fileID: 665422855}
   - component: {fileID: 665422854}
+  - component: {fileID: 665422857}
   m_Layer: 0
   m_Name: Rock2 (5)
   m_TagString: Untagged
@@ -1648,6 +1732,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 665422852}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &665422857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665422852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d31815f59b1f3d9488a3e8e98c992336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &677361355
 GameObject:
   m_ObjectHideFlags: 0
@@ -2143,6 +2239,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &708675154
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1968773581003175366, guid: 4cb1b033eaddf2a4b80f4dddf03dea82, type: 3}
+      propertyPath: m_Name
+      value: Bonus Bubble 1 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204827297588819561, guid: 4cb1b033eaddf2a4b80f4dddf03dea82, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 39.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204827297588819561, guid: 4cb1b033eaddf2a4b80f4dddf03dea82, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 13.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204827297588819561, guid: 4cb1b033eaddf2a4b80f4dddf03dea82, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204827297588819561, guid: 4cb1b033eaddf2a4b80f4dddf03dea82, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204827297588819561, guid: 4cb1b033eaddf2a4b80f4dddf03dea82, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204827297588819561, guid: 4cb1b033eaddf2a4b80f4dddf03dea82, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204827297588819561, guid: 4cb1b033eaddf2a4b80f4dddf03dea82, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204827297588819561, guid: 4cb1b033eaddf2a4b80f4dddf03dea82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204827297588819561, guid: 4cb1b033eaddf2a4b80f4dddf03dea82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204827297588819561, guid: 4cb1b033eaddf2a4b80f4dddf03dea82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4cb1b033eaddf2a4b80f4dddf03dea82, type: 3}
 --- !u!1 &740971763
 GameObject:
   m_ObjectHideFlags: 0
@@ -2347,6 +2500,7 @@ GameObject:
   - component: {fileID: 830362637}
   - component: {fileID: 830362636}
   - component: {fileID: 830362635}
+  - component: {fileID: 830362638}
   m_Layer: 0
   m_Name: Rock2 (3)
   m_TagString: Untagged
@@ -2464,6 +2618,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 830362633}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &830362638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830362633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d31815f59b1f3d9488a3e8e98c992336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &859184344
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3280,6 +3446,7 @@ GameObject:
   - component: {fileID: 1064076935}
   - component: {fileID: 1064076934}
   - component: {fileID: 1064076933}
+  - component: {fileID: 1064076936}
   m_Layer: 0
   m_Name: Rock2 (6)
   m_TagString: Untagged
@@ -3397,6 +3564,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064076931}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1064076936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064076931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d31815f59b1f3d9488a3e8e98c992336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1088915493
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3537,6 +3716,7 @@ GameObject:
   - component: {fileID: 1211101758}
   - component: {fileID: 1211101757}
   - component: {fileID: 1211101756}
+  - component: {fileID: 1211101759}
   m_Layer: 0
   m_Name: Rock2 (8)
   m_TagString: Untagged
@@ -3654,6 +3834,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1211101754}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1211101759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211101754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d31815f59b1f3d9488a3e8e98c992336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1211461899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3853,6 +4045,7 @@ GameObject:
   - component: {fileID: 1227414751}
   - component: {fileID: 1227414750}
   - component: {fileID: 1227414749}
+  - component: {fileID: 1227414752}
   m_Layer: 0
   m_Name: Rock2 (1)
   m_TagString: Untagged
@@ -3970,6 +4163,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227414747}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1227414752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227414747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d31815f59b1f3d9488a3e8e98c992336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1243721036
 GameObject:
   m_ObjectHideFlags: 0
@@ -3982,6 +4187,7 @@ GameObject:
   - component: {fileID: 1243721040}
   - component: {fileID: 1243721039}
   - component: {fileID: 1243721038}
+  - component: {fileID: 1243721041}
   m_Layer: 0
   m_Name: Rock2 (4)
   m_TagString: Untagged
@@ -4099,6 +4305,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1243721036}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1243721041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243721036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d31815f59b1f3d9488a3e8e98c992336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1269349544
 GameObject:
   m_ObjectHideFlags: 0
@@ -4111,6 +4329,7 @@ GameObject:
   - component: {fileID: 1269349548}
   - component: {fileID: 1269349547}
   - component: {fileID: 1269349546}
+  - component: {fileID: 1269349549}
   m_Layer: 0
   m_Name: Rock2 (7)
   m_TagString: Untagged
@@ -4228,6 +4447,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1269349544}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1269349549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269349544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d31815f59b1f3d9488a3e8e98c992336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1300856864
 GameObject:
   m_ObjectHideFlags: 0
@@ -4240,6 +4471,7 @@ GameObject:
   - component: {fileID: 1300856868}
   - component: {fileID: 1300856867}
   - component: {fileID: 1300856866}
+  - component: {fileID: 1300856869}
   m_Layer: 0
   m_Name: Rock2 (11)
   m_TagString: Untagged
@@ -4357,6 +4589,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1300856864}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1300856869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300856864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d31815f59b1f3d9488a3e8e98c992336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1301581485
 GameObject:
   m_ObjectHideFlags: 0
@@ -5275,13 +5519,33 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4477542396590192618, guid: 00ad4a6c21551194b8d82e7a86f13644, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1531900208}
   m_SourcePrefab: {fileID: 100100000, guid: 00ad4a6c21551194b8d82e7a86f13644, type: 3}
 --- !u!4 &1531900206 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3776052545721485537, guid: 00ad4a6c21551194b8d82e7a86f13644, type: 3}
   m_PrefabInstance: {fileID: 1531900205}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1531900207 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4477542396590192618, guid: 00ad4a6c21551194b8d82e7a86f13644, type: 3}
+  m_PrefabInstance: {fileID: 1531900205}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1531900208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531900207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d31815f59b1f3d9488a3e8e98c992336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1568666032
 GameObject:
   m_ObjectHideFlags: 0
@@ -7114,6 +7378,7 @@ GameObject:
   - component: {fileID: 2046825869}
   - component: {fileID: 2046825868}
   - component: {fileID: 2046825867}
+  - component: {fileID: 2046825870}
   m_Layer: 0
   m_Name: Rock2 (10)
   m_TagString: Untagged
@@ -7231,6 +7496,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2046825865}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2046825870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046825865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d31815f59b1f3d9488a3e8e98c992336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &170313680792543679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7581,6 +7858,8 @@ SceneRoots:
   - {fileID: 1211461899}
   - {fileID: 650359177}
   - {fileID: 188275643}
+  - {fileID: 576035028}
+  - {fileID: 708675154}
   - {fileID: 1419749767}
   - {fileID: 1469995293}
   - {fileID: 1089394733}
